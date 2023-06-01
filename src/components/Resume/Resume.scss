@@ -1,0 +1,56 @@
+.resume{
+    display : flex;
+    flex-direction: column;
+    gap : 2.7vh; 
+    background-color: rgb(180, 233, 130);
+
+    &_bloc{
+        display : flex;
+        gap : 1.25vw;
+        padding : 3.3vh 1.8vw;
+        border-radius : 5px;
+        background-color: rgba(251, 251, 251, 1);     
+
+        &-icon{
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            border-radius : 6px;
+            width : 3.1vw;
+            height : 3.1vw;
+
+            &.calories {
+                background-color: #fbeaea;
+            }
+              
+            &.proteins {
+                background-color: #e9f4fb;
+            }
+              
+            &.glucids {
+                background-color: #fbf6e5;
+            }
+              
+            &.lipides {
+                background-color: #fbeaef;
+            }
+
+            img{
+                width : .8vw;
+                height : auto;
+            }
+        }
+
+        &-txt{
+            &--title{
+                font-size : 20px;
+                font-weight : 700;
+            }
+
+            &--subtitle{
+                font-size : 14px;
+                color : rgba(116, 121, 140, 1);
+            }
+        }
+    }
+}

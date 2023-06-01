@@ -1,0 +1,47 @@
+.sidebar{
+    position : fixed;
+    top : 0;
+    left : 0;
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items : center;
+    height : 100vh;
+    padding : 5.5vh 2.6vw;
+    z-index : 1;
+    background-color: rgba(2, 2, 3, 1);
+
+    &_icons{
+        position : absolute;
+        top : 50%;
+        transform : translateY(-50%);
+        display : flex;
+        flex-direction: column;
+        gap : 1.8vh;
+
+        &-icon{
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            width : 3.3vw;
+            height : 3.3vw;
+            border-radius: 6px;        
+            background-color: white;
+
+            img{
+                width : 1.8vw;
+                height : auto;
+            }
+        }
+
+        
+    }
+
+    p{
+        font-size : 12px;
+        writing-mode: vertical-lr;
+        transform : rotate(180deg);
+        color : white;
+        
+    }
+}

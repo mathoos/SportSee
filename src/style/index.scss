@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding : 0;
+  font-family : "Roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, p{
+  color : rgba(2, 2, 3, 1);
+  font-size : 18px;
+  font-weight : 500;
+  text-decoration : none;
+  margin : 0;
+
+  @media screen and (max-width: 900px) {
+    font-size : 12px;
+  }
+}
+
+h1{
+    margin : 0;
+    padding : 0;
+    color : rgba(2, 2, 3, 1);
+
+    span{
+      color : rgba(255, 1, 1, 1)
+    }
+    
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.container{
+  position : relative;
+  display : flex;
+  flex-direction: column;
+  gap : 7.1vh;
+  width : 100%;
+  min-height : 100vh;
+  padding : 17vh 5.85vw 8.5vh 11.7vw;
+  background-color: rgb(186, 216, 231);
+
+  &_info{
+    display : flex;
+    justify-content: space-between;
+    gap : 1.6vw;
+    width : 100%;
+    background-color: purple;
+
+    &-graph{
+      width : 100%;
+      background-color: yellow;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    gap : 2.6vh;
+  }
+}
