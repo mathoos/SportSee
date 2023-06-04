@@ -11,7 +11,42 @@
     z-index : 2;
 
     &_link{
+        position : relative;
         color : white;
         font-size : 24px;
+        cursor : pointer;
+
+        &-container{
+            position : absolute;
+            top : 100%;
+            right : 50%;
+            transform : translateX(50%);
+            margin-top : 6vh;
+            overflow : hidden;
+
+            .dropdown{
+                display : flex;
+                flex-direction: column;
+                padding : 1vw 0;
+                background-color: rgba(2, 2, 3, 1);
+                transform : translateY(-150%);
+                transition : .7s ease-in-out;
+    
+                &.visible{
+                    transform : translateY(0)
+                }
+    
+                &_user{
+                    white-space: nowrap;
+                    color : white;
+                    padding : 1vw 2vw;
+                    transition : .5s ease;
+
+                    &:hover{
+                        color : rgba(255, 1, 1, 1)
+                    }
+                }
+            }
+        }     
     }
 }
