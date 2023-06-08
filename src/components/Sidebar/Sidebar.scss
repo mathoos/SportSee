@@ -27,10 +27,19 @@
             height : 3.3vw;
             border-radius: 6px;        
             background-color: white;
+            cursor : pointer;
+
+            &:hover{
+                img{
+                    transform : scale(1.1)
+                }               
+            }
 
             img{
                 width : 1.8vw;
                 height : auto;
+                will-change: transform;
+                transition : .3s ease;
             }
         }
 
@@ -41,7 +50,6 @@
         font-size : 12px;
         writing-mode: vertical-lr;
         transform : rotate(180deg);
-        color : white;
-        
+        color : white;      
     }
 }

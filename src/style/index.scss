@@ -2,12 +2,12 @@
   margin: 0;
   padding : 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   margin: 0;
   padding : 0;
-  font-family : "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -52,18 +52,23 @@ figure {
   width : 100%;
   min-height : 100vh;
   padding : 17vh 5.85vw 8.5vh 11.7vw;
-  background-color: rgb(186, 216, 231);
 
   &_info{
     display : flex;
     justify-content: space-between;
     gap : 1.6vw;
-    width : 100%;
-    background-color: purple;
 
     &-graph{
-      width : 100%;
-      background-color: yellow;
+      display : flex;
+      flex-direction: column;
+      gap : 2.7vh;
+      flex : 1;
+      background-color: rgba(251, 251, 251, 1); 
+
+      &--container{
+        display : flex;
+        gap : 1.5vw;
+      }
     }
   }
 
