@@ -10,14 +10,13 @@ import Nav from '../../components/Nav/Nav'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import Resume from '../../components/Resume/Resume'
 import UserName from '../../components/UserName/UserName'
-import AverageSessions from '../../components/AverageSessions/AverageSessions'
-import Activity from '../../components/Activity/Activity'
+import Average from '../../components/AverageSessions/AverageSessions'
+import BarChartComponent from '../../components/Activity/Activity'
 import Performance from '../../components/Performance/Performance'
 import '../User/User.scss'
 import '../../style/index.scss'
 
 function getUserById(id) {
-  //const userId = +id; // convertir une chaîne en nombre quand on sait à l'avance que le nombre sera valide
   const userId = parseInt(id, 10); // convertir une chaîne en nombre en explicitant la conversion (décimale)
   const userFound = USER_MAIN_DATA.find(user => user.id === userId);
   const { sessions: averageSessions } = USER_AVERAGE_SESSIONS.find(session => session.userId === userId) || {};
@@ -53,6 +52,11 @@ function User() {
     return <div>blabla</div>;
   }
 
+  const barData = user.activitySessions.map(session => ({
+    day: session.day,
+    kilogram: session.kilogram,
+    calories: session.calories
+  }));
 
   return (
     <div className="container">
@@ -61,13 +65,11 @@ function User() {
       <UserName user={user}/>
       <div className="container_info">       
         <div className="container_info-graph">
-          
-          <AverageSessions user={user}/>
+          <BarChartComponent barData={barData}/> 
           <div className="container_info-graph--container">
-            <Activity user={user}/> 
+            <Average user={user}/>
             <Performance user={user}/>
-          </div>
-                     
+          </div>          
         </div>       
         <Resume user={user}/>
       </div>          

@@ -68,6 +68,9 @@ figure {
       &--container{
         display : flex;
         gap : 1.5vw;
+        width : 100%;
+        height : 50vh;
+        border : 2px solid fuchsia;
       }
     }
   }

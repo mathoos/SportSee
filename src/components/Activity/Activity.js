@@ -1,16 +1,25 @@
 import './Activity.scss'
+import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar,  ResponsiveContainer } from 'recharts';
 
-function Activity({user}){
-    return(
-        <div className="coucou">
-            {user.activitySessions.map(session => (
-                <div key={session.day}>
-                    <p>Day: {session.day}</p>
-                    <p>Session Length: {session.sessionLength}</p>
-                </div>
-            ))}
-        </div>      
-    )   
-}
 
-export default Activity
+function BarChartComponent({ barData }) {
+    return (
+        <div className="chart-container">
+      <ResponsiveContainer className="bar-container">
+            <BarChart className="bar" data={barData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="day" />
+                <YAxis interval="100"/>
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="kilogram" fill="rgba(255, 1, 1, 0.7)" />
+                <Bar dataKey="calories" fill="rgba(1, 255, 1, 0.7)" />
+            </BarChart>
+      </ResponsiveContainer>
+      </div>
+    );
+  }
+  
+ 
+  
+  export default BarChartComponent;
