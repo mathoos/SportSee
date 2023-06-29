@@ -1,4 +1,4 @@
-import './AverageSessions.scss'
+import './LineChart.scss'
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line } from 'recharts';
 
 
@@ -18,13 +18,6 @@ function LineChartComponent({ lineData }) {
     );
   }
   
-  function Average({ user }) {
-    const lineData = user.averageSessions.map(session => ({
-      day: session.day,
-      sessionLength: session.sessionLength
-    }));
   
-    return <LineChartComponent lineData={lineData} />;
-  }
   
-  export default Average;
+  export default LineChartComponent;
