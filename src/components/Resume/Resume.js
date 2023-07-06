@@ -1,4 +1,5 @@
 import '../Resume/Resume.scss'
+import { RadialBarChart, RadialBar, Legend, Tooltip } from 'recharts';
 import kcal from '../../assets/icons/kcal.svg'
 import proteins from '../../assets/icons/proteins.svg'
 import glucids from '../../assets/icons/glucids.svg'
@@ -19,10 +20,32 @@ function Bloc({ icon, title, subtitle, backgroundColor, score }) {
     );
 }
 
-function Score({score}){
+// function Score({score}){
+//     const percentage = score * 100;
+//     return `${percentage.toFixed(2)}%`;
+// }
+
+
+function Score({ score }) {
     const percentage = score * 100;
-    return `${percentage.toFixed(2)}%`;
-}
+    const total = 100 - percentage;
+  
+    const data = [
+      { name: 'Score', value: percentage },
+      { name: 'total', value: total },
+    ];
+  
+    const scoreColor = '#8884d8'; // Couleur du secteur du score
+  
+    return (
+      
+        <RadialBarChart width={200} height={200} cx={100} cy={100} innerRadius={30} outerRadius={80} barSize={10} data={data}>
+          <RadialBar minAngle={15} background clockWise={true} dataKey="value" cornerRadius={10} fill={scoreColor} />
+          <Tooltip />
+        </RadialBarChart>
+      
+    );
+  }
 
 function Resume({user}) {
     return (
