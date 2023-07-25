@@ -1,7 +1,11 @@
 .radar-container{
-    width : 100%;
+    width : 18vw;
+    height : 18vw; 
+    border-radius : 10px;
+    overflow : hidden;
 }
 
+
 .radar{
-    background-color: rgba(2, 2, 3, 1);
+    background-color: rgba(40, 45, 48, 1);
 }

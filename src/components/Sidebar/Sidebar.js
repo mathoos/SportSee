@@ -23,8 +23,7 @@ function Sidebar() {
                     <img src={haltere} alt=""/>
                 </figure>
             </div>
-            <p>Copyright, SportSee 2020</p>
-            
+            <p className="sidebar_copyright">Copyright, SportSee 2020</p>           
         </nav>
     )
 }

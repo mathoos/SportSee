@@ -1,6 +1,72 @@
-.chart-container{
-    height : 29.6vh;
+.bar-container{
+    display : flex;
+    flex-direction: column;
+    gap : 5vh;
+    padding : 1vw;
+    border-radius : 10px;
+    width : 57.9vw;
+    height : 35vh;
+    background-color: rgba(251, 251, 251, 1);
 
+    &_top{
+        display : flex;
+        justify-content: space-between;
+
+        &-title{
+            font-weight : bold;
+            font-size : 15px;
+            color : rgba(32, 37, 58, 1);
+        }
+
+        &-bloc{
+            display : flex;
+            gap : 2.5vw;
+
+            .categorie{
+                display : flex;
+                align-items: center;
+                gap : .8vw;
+
+                .bullet{
+                    width : .6vw;
+                    height : .6vw;
+                    border-radius : 50%;
+
+                    &.kg{
+                        background-color: rgba(40, 45, 48, 1);
+                    }
+                    &.kcal{
+                        background-color: rgba(230, 0, 0, 1);
+                    }
+                }
+
+                p{
+                    font-size : 14px;
+                    font-weight : 500;
+                    color : rgba(116, 121, 140, 1);
+
+                    @media screen and (max-width: 1200px) {
+                        font-size : 12px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
+.custom-tooltip {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    gap : 2vh;
+    padding : 2vh .5vw;
+    margin-left : 1vw;
+    margin-bottom : 5vh;
+    background-color: rgba(230, 0, 0, 1);
+
+    .value{
+        color : rgba(255, 255, 255, 1);
+        font-size : 10px;
+    }
+}

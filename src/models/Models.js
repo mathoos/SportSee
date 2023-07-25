@@ -29,30 +29,17 @@ export class LineChartModel{
 }
 
 
-// Classe de modélisation RadarChart
+//Classe de modélisation RadarChart
 export class RadarChartModel {
-    constructor(performanceSessions) {
+    constructor(performanceSessions, kind) {
       this.performanceSessions = performanceSessions;
+      this.kind = kind;
     }
   
     formattedData() {
         return this.performanceSessions.map(data => ({
-            kind: data.kind,
+            kind: this.kind[data.kind],
             value: data.value,
         }));
     }
 }
-
-// export class RadarChartModel{
-//     constructor(radarData){
-//         this.performanceSessions = radarData.performanceSessions;
-//         this.kind = radarData.kind;
-//     }
-
-//     formattedData() {
-//         return this.performanceSessions.map(data => ({
-//             kind: this.kind[data.kind],
-//             value: data.value,
-//         }));
-//     }
-// }

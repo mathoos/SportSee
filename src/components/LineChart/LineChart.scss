@@ -1,8 +1,18 @@
 
-.radar-container{
-    width : 100%;
-}
-.coucou{
-    border : 2px solid red;
-    width : fit-content;
+.line-container{
+    position : relative;
+    width : 18vw;
+    height : 18vw;
+    border-radius : 10px;
+    background-color: rgba(255, 0, 0, 1);
+
+    &_title{
+        position : absolute;
+        top : 2.5vw;
+        left : 2.5vw;
+        width : 15vw;
+        width : 10vw;
+        color : rgba(255, 255, 255, 0.5);
+        font-weight : bold;
+    }
 }

@@ -4,13 +4,15 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 
 function RadarChartComponent({ radarData }) {
     return (
-        <ResponsiveContainer className="radar-container">
-            <RadarChart className="radar" cx={200} cy={200} outerRadius={100} data={radarData}>
-                <PolarGrid/>
-                <PolarAngleAxis dataKey="kind"/>
-                <Radar name="Performance" dataKey="value" fill="rgba(255, 1, 1, 0.7)" />
-            </RadarChart>
-        </ResponsiveContainer>
+        <div className="radar-container">
+            <ResponsiveContainer>
+                <RadarChart className="radar" cx="50%" cy="50%" outerRadius="80%" data={radarData}>
+                <PolarGrid gridType="polygon" radialLines={false} />
+                    <PolarAngleAxis dataKey="kind"/>
+                    <Radar name="Performance" dataKey="value" fill="rgba(255, 1, 1, 0.7)" />
+                </RadarChart>
+            </ResponsiveContainer>
+        </div>
     );
 }
   

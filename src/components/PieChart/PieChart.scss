@@ -1,0 +1,36 @@
+.pie-container{
+    position : relative;
+    width : 18vw;
+    height : 18vw;
+    background-color: rgba(251, 251, 251, 1);
+    border-radius : 10px;
+
+
+    &_score{
+        position : absolute;
+        top : 50%;
+        left : 50%;
+        transform : translate(-50%, -50%);
+        text-align : center;
+        width : 4.9vw;
+        z-index : 5;
+    }
+
+    .responsive-container{
+        width : 20vw;
+        height : 20vw;
+    }
+}
+
+
+.difference-path {
+    fill: transparent;
+}
+
+.percentage-path{
+    fill : rgba(230, 0, 0, 1);
+}
+
+.circle-path{
+    fill : rgb(255, 255, 255)
+}

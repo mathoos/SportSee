@@ -1,6 +1,20 @@
-.username{
+.user{
     display : flex;
     flex-direction: column;
-    gap : 3.7vh;
+    gap : 3vh;
     width : 100%;
+
+    &_name{
+        font-size : 48px;
+        color : rgba(2, 2, 3, 1);
+    
+        span{
+          color : rgba(255, 1, 1, 1)
+        }    
+    }
+
+    &_accroche{
+        font-size : 18px;
+        font-weight : bold;
+    }
 }

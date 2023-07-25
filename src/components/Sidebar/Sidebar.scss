@@ -7,9 +7,9 @@
     justify-content: flex-end;
     align-items : center;
     height : 100vh;
-    padding : 5.5vh 2.6vw;
-    z-index : 1;
+    padding : 5.5vh 2.8vw;
     background-color: rgba(2, 2, 3, 1);
+    z-index : 1;
 
     &_icons{
         position : absolute;
@@ -17,36 +17,28 @@
         transform : translateY(-50%);
         display : flex;
         flex-direction: column;
-        gap : 1.8vh;
+        gap : 2vh;
 
         &-icon{
             display : flex;
             justify-content: center;
             align-items: center;
-            width : 3.3vw;
-            height : 3.3vw;
+            width : 4.4vw;
+            height : 4.4vw;
             border-radius: 6px;        
             background-color: white;
             cursor : pointer;
 
-            &:hover{
-                img{
-                    transform : scale(1.1)
-                }               
-            }
-
             img{
-                width : 1.8vw;
+                width : 2.4vw;
                 height : auto;
                 will-change: transform;
                 transition : .3s ease;
             }
-        }
-
-        
+        }  
     }
 
-    p{
+    &_copyright{
         font-size : 12px;
         writing-mode: vertical-lr;
         transform : rotate(180deg);

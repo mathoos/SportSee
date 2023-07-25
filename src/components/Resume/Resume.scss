@@ -1,55 +1,63 @@
 .resume{
     display : flex;
     flex-direction: column;
+    justify-content: space-between;
     gap : 2.7vh; 
+    width : 100%;
 
-    &_bloc{
-        display : flex;
-        gap : 1.25vw;
+    &_bloc{    
         padding : 3.3vh 1.8vw;
         border-radius : 5px;
-        background-color: rgba(251, 251, 251, 1);     
-
-        &-icon{
+        background-color: rgba(251, 251, 251, 1);   
+        
+        &-content{
             display : flex;
-            justify-content: center;
             align-items: center;
-            border-radius : 6px;
-            width : 3.1vw;
-            height : 3.1vw;
+            gap : 1.25vw;
 
-            &.calories {
-                background-color: #fbeaea;
+            &--icon{
+                display : flex;
+                justify-content: center;
+                align-items: center;
+                border-radius : 6px;
+                width : 4.1vw;
+                height : 4.1vw;
+    
+                &.calories {
+                    background-color: #fbeaea;
+                }
+                  
+                &.proteins {
+                    background-color: #e9f4fb;
+                }
+                  
+                &.glucids {
+                    background-color: #fbf6e5;
+                }
+                  
+                &.lipides {
+                    background-color: #fbeaef;
+                }
+    
+                img{
+                    width : 1.25vw;
+                    height : auto;
+                }
             }
-              
-            &.proteins {
-                background-color: #e9f4fb;
+    
+            &--txt{
+                .bloc-title{
+                    font-size : 20px;
+                    font-weight : 700;
+                    color : rgba(40, 45, 48, 1);
+                }
+    
+                .bloc-subtitle{
+                    font-size : 14px;
+                    color : rgba(116, 121, 140, 1);
+                }
             }
-              
-            &.glucids {
-                background-color: #fbf6e5;
-            }
-              
-            &.lipides {
-                background-color: #fbeaef;
-            }
-
-            img{
-                width : .8vw;
-                height : auto;
-            }
-        }
-
-        &-txt{
-            &--title{
-                font-size : 20px;
-                font-weight : 700;
-            }
-
-            &--subtitle{
-                font-size : 14px;
-                color : rgba(116, 121, 140, 1);
-            }
-        }
+        }   
     }
 }
+

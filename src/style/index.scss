@@ -1,81 +1,73 @@
 *{
-  margin: 0;
-  padding : 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding : 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
 body {
-  margin: 0;
-  padding : 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding : 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 
 a, p, ul{
-  color : rgba(2, 2, 3, 1);
-  font-size : 18px;
-  font-weight : 500;
-  text-decoration : none;
-  margin : 0;
-  padding : 0;
-  list-style-type: none;
+	color : rgba(2, 2, 3, 1);
+	font-size : 18px;
+	font-weight : 500;
+	text-decoration : none;
+	margin : 0;
+	padding : 0;
+	list-style-type: none;
 
-  @media screen and (max-width: 900px) {
-    font-size : 12px;
-  }
-}
-
-h1{
-    margin : 0;
-    padding : 0;
-    color : rgba(2, 2, 3, 1);
-
-    span{
-      color : rgba(255, 1, 1, 1)
-    }
-    
+	@media screen and (max-width: 1200px) {
+		font-size : 14px;
+	}
 }
 
 figure {
-  margin: 0;
-  padding: 0;
-  border: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+img{
+	display : block;
 }
 
 .container{
-  position : relative;
-  display : flex;
-  flex-direction: column;
-  gap : 7.1vh;
-  width : 100%;
-  min-height : 100vh;
-  padding : 17vh 5.85vw 8.5vh 11.7vw;
+	position : relative;
+	display : flex;
+	flex-direction: column;
+	gap : 7.1vh;
+	width : 100%;
+	min-height : 100vh;
+	padding : 17vh 5.85vw 8.5vh 11.7vw;
 
-  &_info{
-    display : flex;
-    justify-content: space-between;
-    gap : 1.6vw;
+	&_info{
+		display : flex;
+		justify-content: space-between;
+		gap : 2vw;
 
-    &-graph{
-      display : flex;
-      flex-direction: column;
-      gap : 2.7vh;
-      flex : 1;
-      background-color: rgba(251, 251, 251, 1); 
+		&-graph{
+			display : flex;
+			flex-direction: column;
+			gap : 4vh;
+			flex : 1;
 
-      &--container{
-        display : flex;
-        gap : 1.5vw;
-        width : 100%;
-        height : 50vh;
-        border : 2px solid fuchsia;
-      }
-    }
-  }
+			&--container{
+				display : flex;
+				justify-content: space-between;
+				width : 57.9vw;
+				border : 1px solid red;
 
-  @media screen and (max-width: 900px) {
-    gap : 2.6vh;
-  }
+			}
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		gap : 2.6vh;
+	}
 }

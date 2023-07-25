@@ -3,9 +3,9 @@ import '../UserName/UserName.scss'
 function UserName({ user }) {
  
     return ( 
-        <div className="username">
-            <h1>Bonjour <span>{`${user.userInfos.firstName} ${user.userInfos.lastName}`}</span></h1>
-            <p>Félicitations ! Vous avez explosé vos objectifs hier !</p>
+        <div className="user">
+            <h1 className="user_name">Bonjour <span>{`${user.userInfos.firstName} ${user.userInfos.lastName}`}</span></h1>
+            <p className="user_accroche">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>   
     );
 }

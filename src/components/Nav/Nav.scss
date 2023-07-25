@@ -10,43 +10,31 @@
     background-color : rgba(2, 2, 3, 1);
     z-index : 2;
 
+    &_logo{
+        margin : 0;
+        padding : 0;
+        box-sizing: border-box;
+
+        img{
+            display : block;
+            width : 12.3vw;
+            height : auto;
+        }
+    }
+
     &_link{
         position : relative;
         color : white;
         font-size : 24px;
+        transition : .3s ease;
         cursor : pointer;
+        
+        @media screen and (max-width: 1200px) {
+            font-size : 20px;
+        }
 
-        &-container{
-            position : absolute;
-            top : 100%;
-            right : 50%;
-            transform : translateX(50%);
-            margin-top : 6vh;
-            overflow : hidden;
-
-            .dropdown{
-                display : flex;
-                flex-direction: column;
-                padding : 1vw 0;
-                background-color: rgba(2, 2, 3, 1);
-                transform : translateY(-150%);
-                transition : .7s ease-in-out;
-    
-                &.visible{
-                    transform : translateY(0)
-                }
-    
-                &_user{
-                    white-space: nowrap;
-                    color : white;
-                    padding : 1vw 2vw;
-                    transition : .5s ease;
-
-                    &:hover{
-                        color : rgba(255, 1, 1, 1)
-                    }
-                }
-            }
-        }     
+        &:hover{
+            color : rgba(255, 0, 0, 1);
+        }  
     }
 }
