@@ -1,7 +1,7 @@
 import './BarChart.scss'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, ResponsiveContainer } from 'recharts';
 
-const CustomTooltip = ({ active, payload, label }) => {
+const CustomTooltip = ({ active, payload}) => {
 	if (active && payload && payload.length) {
 	  return (
 		<div className="custom-tooltip">
@@ -12,7 +12,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 	}
   
 	return null;
-  };
+};
 
 function BarChartComponent({ barData }) {
 	return (
@@ -33,8 +33,8 @@ function BarChartComponent({ barData }) {
 			</div>
 			<ResponsiveContainer>
 				<BarChart className="bar" barGap={10} data={barData}>
-					<CartesianGrid vertical={false}/>
-					<XAxis dataKey="day" />
+					<CartesianGrid vertical={false} strokeDasharray={ 3}/>
+					<XAxis dataKey="day"  />
 					<YAxis  domain={[0, 400]}/>
 					<Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(196, 196, 196, 0.5)' }} /> {/* Utilisez CustomTooltip pour personnaliser le contenu de l'encart */}
 					<Tooltip />

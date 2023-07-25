@@ -1,6 +1,16 @@
 import './LineChart.scss'
 import { ResponsiveContainer, LineChart, YAxis, XAxis, Tooltip, Line } from 'recharts';
 
+const CustomTooltip = ({ payload, active }) => {
+	if (active && payload && payload.length) {
+		return (
+			<div className="custom-tooltip">
+				<p>{`${payload[0].value}min`}</p>
+			</div>
+		);
+	}
+	return null;
+};
 
 function LineChartComponent({ lineData }) {
 	return (
@@ -10,8 +20,8 @@ function LineChartComponent({ lineData }) {
 				<LineChart data={lineData}>  
 				<YAxis hide={true} domain={[0, 100]} axisLine={false} tickLine={false} tick={{ fill: '#FFFFFF', opacity: '0.5' }} />
 				<XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fill: '#FFFFFF', opacity: '0.5' }}/>
-				<Tooltip />
-				<Line type="monotone" dataKey="sessionLength"  stroke="url(#gradient)" strokeWidth={2} dot={false}/>
+				<Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(blue)' }}/>
+				<Line type="monotone" dataKey="sessionLength" stroke="url(#gradient)" strokeWidth={2} dot={false}/>
 				<defs>
 					<linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
 						<stop offset="1.19%" stopColor="#FFFFFF" />

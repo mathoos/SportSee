@@ -16,6 +16,9 @@
             font-weight : bold;
             font-size : 15px;
             color : rgba(32, 37, 58, 1);
+            @media screen and (max-width: 1200px) {
+                font-size : 14px;
+            }
         }
 
         &-bloc{
@@ -52,21 +55,23 @@
             }
         }
     }
-}
 
-
-.custom-tooltip {
-    display : flex;
-    flex-direction: column;
-    justify-content: center;
-    gap : 2vh;
-    padding : 2vh .5vw;
-    margin-left : 1vw;
-    margin-bottom : 5vh;
-    background-color: rgba(230, 0, 0, 1);
-
-    .value{
-        color : rgba(255, 255, 255, 1);
-        font-size : 10px;
+    .custom-tooltip {
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap : 2vh;
+        padding : 2vh .5vw;
+        margin-left : 1vw;
+        margin-bottom : 5vh;
+        background-color: rgba(230, 0, 0, 1);
+    
+        .value{
+            color : rgba(255, 255, 255, 1);
+            font-size : 10px;
+        }
     }
 }
+
+
