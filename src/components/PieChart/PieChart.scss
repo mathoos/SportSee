@@ -1,10 +1,26 @@
 .pie-container{
     position : relative;
-    width : 18vw;
-    height : 18vw;
+    width : 20vw;
+    height : 20vw;
     background-color: rgba(251, 251, 251, 1);
     border-radius : 10px;
 
+    &_title{
+        position : absolute;
+        top : 2.5vw;
+        left : 2.5vw;
+        width : 10vw;
+        font-weight : bold;
+        font-size : 15px;
+        line-height : 24px;
+        color : rgba(32, 37, 58, 1);
+        @media screen and (max-width: 1200px) {
+            top : 1.5vw;
+            left : 1.5vw;
+            width : 15vw;
+            font-size : 14px;
+        }
+    }
 
     &_score{
         position : absolute;
@@ -12,25 +28,29 @@
         left : 50%;
         transform : translate(-50%, -50%);
         text-align : center;
-        width : 4.9vw;
+        width : 50%;
+        font-size : 15px;
+        color : rgba(116, 121, 140, 1);
         z-index : 5;
+
+        span{
+            font-size : 20px;
+            font-weight : 700;
+            color : rgba(40, 45, 48, 1);
+        }
     }
 
-    .responsive-container{
-        width : 20vw;
-        height : 20vw;
+    .difference-path {
+        fill: transparent;
+    }
+    
+    .percentage-path{
+        fill : rgba(230, 0, 0, 1);
+    }
+    
+    .circle-path{
+        fill : rgb(255, 255, 255)
     }
 }
 
 
-.difference-path {
-    fill: transparent;
-}
-
-.percentage-path{
-    fill : rgba(230, 0, 0, 1);
-}
-
-.circle-path{
-    fill : rgb(255, 255, 255)
-}

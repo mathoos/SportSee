@@ -1,13 +1,13 @@
 .radar-container{
-    width : 18vw;
-    height : 18vw; 
+    width : 20vw;
+    height : 20vw; 
     border-radius : 10px;
     overflow : hidden;
 
-    
+    .radarChart{
+        background-color: rgba(40, 45, 48, 1);
+    }
 }
 
 
-.radar{
-    background-color: rgba(40, 45, 48, 1);
-}
+
