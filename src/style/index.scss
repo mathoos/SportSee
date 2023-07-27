@@ -64,4 +64,16 @@ img{
 			}
 		}
 	}
+
+	&_error{
+		display : flex;
+		justify-content: center;
+		padding-top : 20vh;
+		flex : 1;
+
+		&-title{
+			font-size : 120px;
+			color : rgba(230, 0, 0, 1);
+		}
+	}
 }

@@ -18,7 +18,7 @@ function PieChartComponent({ user }) {
             <p className="pie-container_score"><span>{percentage}%</span> <br/>de votre <br/> objectif</p> 
             <ResponsiveContainer>
                 <PieChart>
-                    <Pie nameKey="name"cx="50%" cy="50%" startAngle={-270} stroke="none" data={data} dataKey="value" outerRadius={80} innerRadius={70} paddingAngle={0} cornerRadius={50}>
+                    <Pie nameKey="name" cx="50%" cy="50%" startAngle={-270} stroke="none" data={data} dataKey="value" outerRadius={80} innerRadius={70} paddingAngle={0} cornerRadius={50}>
                         {data.map((entry, index) => (
                             <Cell key={`cell-${index}`} className={`${entry.name === 'Difference' ? 'difference-path' : ''} ${entry.name === 'Percentage' ? 'percentage-path' : ''}`}/>
                         ))}

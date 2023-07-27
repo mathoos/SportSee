@@ -5,8 +5,9 @@ export class BarChartModel {
     }
   
     formattedData() {
-        return this.barData.map(session => ({
-            day: session.day,
+        return this.barData.map((session, index) => ({
+            day: index + 1, // Pour afficher le numéro du jour
+            // day: session.day, // Pour afficher le jour
             kilogram: session.kilogram,
             calories: session.calories
         }));
@@ -37,8 +38,17 @@ export class RadarChartModel {
     }
   
     formattedData() {
+        const frenchNames = {
+            "cardio": "cardio",
+            "energy": "énergie",
+            "endurance": "endurance",
+            "strength": "force",
+            "speed": "vitesse",
+            "intensity": "intensité",
+        };
+
         return this.performanceSessions.map(data => ({
-            kind: this.kind[data.kind],
+            kind: frenchNames[this.kind[data.kind]] || this.kind[data.kind], 
             value: data.value,
         }));
     }

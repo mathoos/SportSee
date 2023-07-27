@@ -36,7 +36,7 @@ function BarChartComponent({ barData }) {
 					<CartesianGrid vertical={false} strokeDasharray={ 3}/>
 					<XAxis dataKey="day"  />
 					<YAxis  domain={[0, 400]}/>
-					<Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(196, 196, 196, 0.5)' }} /> {/* Utilisez CustomTooltip pour personnaliser le contenu de l'encart */}
+					<Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(196, 196, 196, 0.5)' }} />
 					<Tooltip />
 					<Bar dataKey="kilogram" fill="rgba(40, 45, 48, 1)" radius={[50, 50, 0, 0]} barSize={7}/>
 					<Bar dataKey="calories" fill="rgba(230, 0, 0, 1)" radius={[50, 50, 0, 0]} barSize={7}/>
