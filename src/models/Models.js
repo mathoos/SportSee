@@ -22,8 +22,18 @@ export class LineChartModel{
     }
 
     formattedData(){
+        const dayNames = {
+            "1": "L",
+            "2": "M",
+            "3": "M",
+            "4": "J",
+            "5": "V",
+            "6": "S",
+            "7": "D",
+        };
         return this.lineData.map(session => ({
-            day: session.day,
+            day: dayNames[session.day.toString()] || session.day.toString(),
+            //day: session.day,
             sessionLength: session.sessionLength
         }))
     }
