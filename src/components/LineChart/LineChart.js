@@ -17,9 +17,9 @@ function LineChartComponent({ lineData }) {
 		<div className="line-container">
 			<p className="line-container_title">Durée moyenne des sessions</p>
 			<ResponsiveContainer>
-				<LineChart data={lineData}  margin={{top: 0, right: 0, left: 0, bottom: 0}} >  
-					<YAxis hide={true} domain={[0, 100]} tick={{ fill: '#FFFFFF', opacity: '0.5' }} />
-					<XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fill: '#FFFFFF', opacity: '0.5' }}/>
+				<LineChart data={lineData}  margin={{top: 0, right: 10, left: 10, bottom: 0}} >  
+					<YAxis hide={true}  axisLine={false} tickLine={false} domain={[0, 100]} />
+					<XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fill: '#FFFFFF', opacity: '0.5', }}/>
 					<Tooltip offset={0} content={<CustomTooltip/>}/>
 					<Line type="monotone" dataKey="sessionLength" stroke="url(#gradient)" strokeWidth={2} dot={false}/>
 					<defs>
