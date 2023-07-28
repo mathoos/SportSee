@@ -4,7 +4,7 @@ import Error from '../pages/Error/Error';
 
 // faire une condition pour accéder au données mockées ou fetchées dans une seule fonction
 
-// Données mockées
+
 
 async function getUserById(id) {
 	try {
